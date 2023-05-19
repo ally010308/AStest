@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Spinner</string>
+    <string name="label_lineX">Linear Acceleration X: %1$.2f</string>
+    <string name="label_lineY">Linear Acceleration Y: %1$.2f</string>
+    <string name="label_lineZ">Linear Acceleration Z: %1$.2f</string>
+    <string name="label_totalacc">Total Acceleration : %1$.2f</string>
+
+    <string name="label_speedX">Linear Speed X: %1$.2f</string>
+    <string name="label_disX">Linear Distance X: %1$.2f</string>
+
+    <string name="label_speedY">Linear Speed Y: %1$.2f</string>
+    <string name="label_disY">Linear Distance Y: %1$.2f</string>
+
+    <string name="label_speedZ">Linear Speed Z: %1$.2f</string>
+    <string name="label_disZ">Linear Distance Z: %1$.2f</string>
+
+    <string name="label_totalDis">Total Distance: %1$.2f</string>
+
+    <string name="error_no_sensor">Sensor not available!</string>
+
+    <string-array name="stations">
+
+        <item>대야미</item>
+        <item>반월</item>
+        <item>상록수</item>
+        <item>한대앞</item>
+
+    </string-array>
+
+    <string name="label_end">목적지는 %s 역입니다.</string>
+    <string name="label_start">출발지는 %s 역입니다.</string>
+    <string name="label_left">남은 정거장 수는 %i 개</string>
+    <string name="label_one">다음 역에서 하차합니다</string>
+
+
+</resources>
