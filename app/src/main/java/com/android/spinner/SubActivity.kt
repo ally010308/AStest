@@ -223,7 +223,8 @@ class SubActivity : AppCompatActivity(), SensorEventListener {
                 tvLineX!!.text = resources.getString(R.string.label_lineX, line[0])
                 tvLineY!!.text = resources.getString(R.string.label_lineY, line[1])
                 tvLineZ!!.text = resources.getString(R.string.label_lineZ, line[2])
-                ValAcc =  sqrt((line[0].pow(2) + line[1].pow(2))+ line[2].pow(2).toDouble()).toFloat()
+                val totalAcc =sqrt((line[0].pow(2) + line[1].pow(2))+ line[2].pow(2).toDouble()).toFloat()
+                ValAcc =  String.format("%.2f", totalAcc).toFloat()
                 tvValacc!!.text = "Total Acceleration : $ValAcc"
 
                 entries.add(Entry(entries.size.toFloat(), ValAcc)) // mp그래프
@@ -238,7 +239,7 @@ class SubActivity : AppCompatActivity(), SensorEventListener {
                         val starttime1 = System.currentTimeMillis()
                         case++
                         }
-                    1 -> if(ValAcc < 0.01f){ // 일정속도로 이동중
+                    1 -> if(ValAcc < 0.1f){ // 일정속도로 이동중
                         val endtime1 = System.currentTimeMillis()
                         val time1 = (endtime1 - starttime1) / 1000.0
                         case++
@@ -248,7 +249,7 @@ class SubActivity : AppCompatActivity(), SensorEventListener {
                         val time2 = (endtime2 - endtime1) / 1000.0
                         case++
                     }
-                    3 -> if(ValAcc < 0.01f) {
+                    3 -> if(ValAcc < 0.01f) { //멈춤
                         val endtime3 = System.currentTimeMillis()
                         val time3 = (endtime3 - endtime2) / 1000.0
                         case = 0
